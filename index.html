@@ -14,7 +14,7 @@
         <div class="nav-bar">
             <nav>
                 <ul>
-                    <li><a href="#" onclick="loadPage('/reports/api_coverage.html')">API</a></li>
+                    <li><a href="#" onclick="loadPage('./reports/api_coverage')">API</a></li>
                     <li><a href="#" onclick="loadPage('/reports/ui_coverage.html')">UI</a></li>
                     <li><a href="#" onclick="loadPage('/reports/core_coverage.html')">CORE</a></li>
                     <li><a href="#" onclick="loadPage('/reports/intake_coverage.html')">INTAKE</a></li>
@@ -28,9 +28,9 @@
 
     </main>
     <script>
-    function loadPage(url) {
-      document.getElementById('content-frame').src = url;
-    }
-  </script>
+        function loadPage(url) {
+            document.getElementById('content-frame').src = url;
+        }
+    </script>
 </body>
 </html>
