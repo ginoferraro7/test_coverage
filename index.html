@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coverage Reports</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Coverage Reports</h1>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadPage('/reports/api_coverage.html')">API</a></li>
+                    <li><a href="#" onclick="loadPage('/reports/ui_coverage.html')">UI</a></li>
+                    <li><a href="#" onclick="loadPage('/reports/core_coverage.html')">CORE</a></li>
+                    <li><a href="#" onclick="loadPage('/reports/intake_coverage.html')">INTAKE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <iframe id="content-frame" src="/reports/api_coverage.html"></iframe>
+
+    </main>
+    <script>
+    function loadPage(url) {
+      document.getElementById('content-frame').src = url;
+    }
+  </script>
+</body>
+</html>
