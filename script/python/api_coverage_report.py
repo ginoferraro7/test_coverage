@@ -697,8 +697,13 @@ def main():
     parser.add_argument(
         '--format',
         choices=['console', 'json', 'html', 'markdown'],
-        default='console',
+        default='html',
         help='Output format (default: console)'
+    )
+    parser.add_argument(
+        '--save',
+        choices=["True"],
+        help='xxxxxxx'
     )
     parser.add_argument(
         '--output',
@@ -714,8 +719,7 @@ def main():
     features_path = script_dir / args.features
     report_dir = Path("reports/")
     report_dir.mkdir(parents=True, exist_ok=True)
-    archive_dir = Path("reports/api_archive/")
-    archive_dir.mkdir(parents=True, exist_ok=True)
+    archive_dir = Path("reports/api_archive")
     date_time_now = datetime.now().strftime("%Y-%m-%d")
 
     # Parse OpenAPI schema
@@ -745,6 +749,15 @@ def main():
         output = formatter.format_html(report, operation_tags)
     elif args.format == 'markdown':
         output = formatter.format_markdown(report, operation_tags)
+    print(f'============================================{args}')
+    if args.save:
+        archive_dir.mkdir(parents=True, exist_ok=True)
+        output_path_archive = archive_dir / f"api_coverage_{date_time_now}.html"
+        output_path = report_dir / "api_coverage.html"
+
+        for path in [output_path, output_path_archive]:
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(output)
 
     if args.output:
         output_path = Path(args.output)
@@ -755,15 +768,12 @@ def main():
     else:
         if args.format == 'console':
             print(output)
-        else:
+        else:   
             if args.format == 'html':
                 output_path = report_dir / "api_coverage.html"
-                output_path_archive = archive_dir / f"api_coverage_{date_time_now}.html"
-
-                for path in [output_path, output_path_archive]:
-                    with open(path, 'w', encoding='utf-8') as f:
-                        f.write(output)
-
+                with open(output_path, 'w', encoding='utf-8') as f:
+                    f.write(output)
+                        
             else:
                 # For other formats like json, keep the original behavior
                 output_path = script_dir / f"coverage_report.{args.format}"
