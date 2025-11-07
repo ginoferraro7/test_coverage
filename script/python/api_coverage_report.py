@@ -22,7 +22,7 @@ from collections import defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
-
+from datetime import datetime
 
 @dataclass
 class EndpointInfo:
@@ -714,7 +714,9 @@ def main():
     features_path = script_dir / args.features
     report_dir = Path("reports/")
     report_dir.mkdir(parents=True, exist_ok=True)
-    
+    archive_dir = Path("reports/api_archive/")
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    date_time_now = datetime.now().strftime("%Y-%m-%d")
 
     # Parse OpenAPI schema
     print(f"📖 Reading OpenAPI schema from: {schema_path}", file=sys.stderr)
@@ -756,11 +758,17 @@ def main():
         else:
             if args.format == 'html':
                 output_path = report_dir / "api_coverage.html"
+                output_path_archive = archive_dir / f"api_coverage_{date_time_now}.html"
+
+                for path in [output_path, output_path_archive]:
+                    with open(path, 'w', encoding='utf-8') as f:
+                        f.write(output)
+
             else:
                 # For other formats like json, keep the original behavior
                 output_path = script_dir / f"coverage_report.{args.format}"
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write(output)
+                with open(output_path, 'w', encoding='utf-8') as f:
+                    f.write(output)
 
             print(f"✓ Report saved to: {output_path}", file=sys.stderr)
 
