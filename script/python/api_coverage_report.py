@@ -396,7 +396,7 @@ class ReportFormatter:
         .progress-text {{
             position: relative;
             z-index: 1; /* keeps text above the fill */
-            color: #fff;
+            color: #000;
             min-width: 12%;
             padding-left: 8px;
             white-space: nowrap;
@@ -480,7 +480,7 @@ class ReportFormatter:
 
         <div class="progress-bar">
             <div class="progress-fill" style="width: {report.coverage_percentage}%">
-                <span class="progress-text">{report.coverage_percentage}% Coverage</span>
+                <span class="progress-text">{round(report.coverage_percentage)}% Coverage</span>
             </div>
             
         </div>
