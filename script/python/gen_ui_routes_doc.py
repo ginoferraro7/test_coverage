@@ -5,7 +5,7 @@ from pathlib import Path
 """"
 Usage:
 python script/python/gen_ui_routes_doc.py 
-default route path: /routes/routs.ts 
+default route path: /routes/routes.ts 
 default output path: /routes/docs/ui_routes_doc.json 
 """
 def extract_routes(ts_text: str):
@@ -18,7 +18,7 @@ def extract_routes(ts_text: str):
     # Remove comments
     ts_text = re.sub(r"//.*", "", ts_text)
 
-    # Simple static routes
+    # Static routes
     for key, value in re.findall(r'(\w+):\s*[\'"]([^\'"]+)[\'"]', ts_text):
         routes[key] = {"path": value, "params": {}}
 

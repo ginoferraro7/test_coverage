@@ -1,0 +1,485 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "UI Routes Documentation"
+  },
+  "paths": {
+    "/": {},
+    "/login": {},
+    "/password-reset": {},
+    "/verifyaccount/{uuidb64}/{token}": {
+      "parameters": [
+        {
+          "name": "uuidb64",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "token",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/version": {},
+    "/dashboard": {},
+    "/profile/settings": {},
+    "/profile/change-password": {},
+    "/profile/create-token": {},
+    "/security/users/invite-new-user": {},
+    "/security/users": {},
+    "/security/roles/new-role": {},
+    "/security/roles": {},
+    "/security/row-policies/new-row-policy": {},
+    "/security/row-policies": {},
+    "/security/audit-trails": {},
+    "/security/auth-logs": {},
+    "/security/buckets": {},
+    "/security/new-bucket": {},
+    "/security/credentials": {},
+    "/security/new-credential": {},
+    "/security/pending-invites": {},
+    "/security/service-accounts": {},
+    "/security/new-service-account": {},
+    "/data/tables": {},
+    "/data/new-table": {},
+    "/data/new-summary-table": {},
+    "/data/new-summary-table/column-analysis": {},
+    "/data/new-view": {},
+    "/data/dictionaries": {},
+    "/data/dictionaries/new-data-dictionary": {},
+    "/data/functions": {},
+    "/data/files": {},
+    "/data/organization-settings": {},
+    "/data/files/new-file": {},
+    "/data/functions/new-custom-function": {},
+    "/data/new-ingest-source": {},
+    "/data/new-transform": {},
+    "/data/validate-transform": {},
+    "/data/new-transform-template": {},
+    "/data/transform-templates": {},
+    "/scale": {},
+    "/scale/search": {},
+    "/scale/core": {},
+    "/scale/pool/create": {},
+    "/jobs/alter-jobs/create": {},
+    "/jobs/batch-jobs/create": {},
+    "/jobs/alter-jobs": {},
+    "/jobs/batch-jobs": {},
+    "/queries": {},
+    "/result": {},
+    "/support": {},
+    "/system-health/counts": {},
+    "/system-health/logs": {},
+    "/security/users/{userId}/edit-user": {
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/roles/{roleId}/edit-role": {
+      "parameters": [
+        {
+          "name": "roleId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/row-policies/{tableId}/{rowPolicyId}/edit-row-policy": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "rowPolicyId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/row-policies/?table_id={tableId}&data={tableName}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "tableName",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "table_id",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "data",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/buckets/{bucketId}": {
+      "parameters": [
+        {
+          "name": "bucketId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/credentials/{credentialId}": {
+      "parameters": [
+        {
+          "name": "credentialId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/security/service-accounts/{accountId}/update-service-account": {
+      "parameters": [
+        {
+          "name": "accountId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/edit-summary-settings/column-analysis": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/edit-summary-settings": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/view/edit/{uuid}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "uuid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/column-management": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/column-management/new-column-alias": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/column-management/analyze-expression": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/column-management/{columnId}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "columnId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "number"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/column-management/{columnId}/analyze-expression": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "columnId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "number"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/source/edit/{type}/{uuid}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "type",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "uuid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/tables/{tableId}/transform/edit/{uuid}": {
+      "parameters": [
+        {
+          "name": "tableId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "uuid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/files/{projectId}/{name}/update-file": {
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/dictionaries/{projectId}/{dictionaryId}/edit-dictionary": {
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "dictionaryId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/functions/{projectId}/{functionId}/edit-function": {
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "functionId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/transform-templates/{templateId}/edit": {
+      "parameters": [
+        {
+          "name": "templateId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/project/{projectId}/health": {
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/data/project/{projectId}/health/delete-project": {
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/scale/pool/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  }
+}
