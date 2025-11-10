@@ -702,8 +702,7 @@ def main():
     )
     parser.add_argument(
         '--save',
-        choices=["True"],
-        help='xxxxxxx'
+        action='store_true'
     )
     parser.add_argument(
         '--output',
@@ -749,8 +748,9 @@ def main():
         output = formatter.format_html(report, operation_tags)
     elif args.format == 'markdown':
         output = formatter.format_markdown(report, operation_tags)
-    print(f'============================================{args}')
+
     if args.save:
+        output = formatter.format_html(report, operation_tags)
         archive_dir.mkdir(parents=True, exist_ok=True)
         output_path_archive = archive_dir / f"api_coverage_{date_time_now}.html"
         output_path = report_dir / "api_coverage.html"
