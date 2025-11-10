@@ -12,6 +12,7 @@ Usage:
     python script/python/api_coverage_report.py --format json --output coverage_report.json
     python script/python/api_coverage_report.py --format html --output coverage_report.html
     python script/python/api_coverage_report.py --format markdown --output coverage_report.md
+    python script/python/api_coverage_report.py --save
 """
 
 import argparse
@@ -702,6 +703,7 @@ def main():
     )
     parser.add_argument(
         '--save',
+        help='Generates an html file into reports/api_archive with datetime.now()',
         action='store_true'
     )
     parser.add_argument(
@@ -712,7 +714,6 @@ def main():
     args = parser.parse_args()
 
     # Resolve paths relative to elessar-fmwk directory (script is in script/python/)
-    # current_dir = Path(__file__).resolve().parent
     script_dir = Path(__file__).parent.parent.parent
     schema_path = script_dir / args.schema
     features_path = script_dir / args.features
@@ -749,6 +750,7 @@ def main():
     elif args.format == 'markdown':
         output = formatter.format_markdown(report, operation_tags)
 
+    # Saves api_coverage.html archive
     if args.save:
         output = formatter.format_html(report, operation_tags)
         archive_dir.mkdir(parents=True, exist_ok=True)
@@ -781,26 +783,6 @@ def main():
                     f.write(output)
 
             print(f"✓ Report saved to: {output_path}", file=sys.stderr)
-
-
-    # # Write output
-    # if args.output:
-    #     output_path = Path(args.output)
-    #     output_path.parent.mkdir(parents=True, exist_ok=True)
-    #     with open(output_path, 'w', encoding='utf-8') as f:
-    #         f.write(output)
-    #     print(f"✓ Report saved to: {output_path}", file=sys.stderr)
-    # else:
-    #     if args.format == 'console':
-    #         print(output)
-    #     else:
-    #         # Auto-generate filename for json/html
-    #         default_name = f"coverage_report.{args.format}"
-    #         output_path = script_dir / default_name
-    #         with open(output_path, 'w', encoding='utf-8') as f:
-    #             f.write(output)
-    #         print(f"✓ Report saved to: {output_path}", file=sys.stderr)
-
 
 if __name__ == '__main__':
     main()
