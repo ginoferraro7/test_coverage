@@ -5,8 +5,8 @@ from pathlib import Path
 """"
 Usage:
 python script/python/gen_ui_routes_doc.py 
-default route path: /routes/routes.ts 
-default output path: /routes/docs/ui_routes_doc.json 
+default path to fetch routes: /routes/routes.ts 
+default output path: /routes/docs/routes_openapi_schema.json 
 """
 def extract_routes(ts_text: str):
     """
