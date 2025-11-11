@@ -331,6 +331,7 @@ class ReportFormatter:
         }}
         .container {{
             max-width: 1200px;
+            min-width: 0; 
             margin: 0 auto;
             background: white;
             padding: 30px;
@@ -394,6 +395,7 @@ class ReportFormatter:
             font-weight: bold;
             transition: width 0.3s ease;
         }}
+        
         .progress-text {{
             position: relative;
             z-index: 1; /* keeps text above the fill */
@@ -406,6 +408,8 @@ class ReportFormatter:
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            table-layout: fixed;
+            border-collapse: collapse;
         }}
         th {{
             background-color: #667eea;
@@ -413,11 +417,17 @@ class ReportFormatter:
             padding: 12px;
             text-align: left;
             font-weight: 600;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }}
         td {{
+            white-space: normal;
             padding: 10px 12px;
             border-bottom: 1px solid #ddd;
+            word-break: break-all;
         }}
+        
         tr:hover {{
             background-color: #f5f5f5;
         }}
@@ -547,7 +557,7 @@ class ReportFormatter:
         </table>
 
         <h2>❌ Uncovered Endpoints</h2>
-        <table>
+        <table style='width: 100%; max-width: 100%; table-layout: fixed;'>
             <thead>
                 <tr>
                     <th>Operation ID</th>
