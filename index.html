@@ -15,7 +15,14 @@
             <nav>
                 <ul>
                     <li><a href="#" onclick="loadPage('./reports/api_coverage.html')">API</a></li>
-                    <li><a href="#" onclick="loadPage('./reports/ui_coverage.html')">UI</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" onclick="loadPage('./reports/ui_coverage.html')">UI</a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="loadPage('./routes/ui_routes.html')">UI Routes</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#" onclick="loadPage('./reports/core_coverage.html')">CORE</a></li>
                     <li><a href="#" onclick="loadPage('./reports/intake_coverage.html')">INTAKE</a></li>
                 </ul>
