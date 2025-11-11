@@ -84,7 +84,7 @@ def extract_query_params(path: str, params: dict):
     return query_params
 
 
-def generate_openapi():
+def generate_routes_doc():
     input_path = Path("routes/routes.ts")
     output_path = Path("routes/docs/openapi_schema.json")
 
@@ -123,4 +123,4 @@ def generate_openapi():
 
 
 if __name__ == "__main__":
-    generate_openapi()
+    generate_routes_doc()
