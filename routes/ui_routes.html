@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Routes Documentation</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        h1 { 
+            color: #222; 
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .route-block {
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2.path { 
+            background-color: #f7f7f7; 
+            padding: 12px 20px; 
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #007bff; /* Blue for the path */
+            font-size: 1.2em;
+            word-break: break-all;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        th, td { 
+            border-top: 1px solid #eee; 
+            padding: 12px 20px; 
+            text-align: left; 
+            vertical-align: top;
+        }
+        th { 
+            background-color: #fcfcfc;
+            font-weight: 600;
+            color: #555;
+            width: 20%;
+        }
+        td:first-child {
+            font-family: 'Courier New', Courier, monospace;
+            color: #d63384; /* Pinkish for param name */
+            font-weight: bold;
+        }
+        .no-params {
+            padding: 12px 20px;
+            color: #777;
+        }
+        .required-true {
+            font-weight: bold;
+            color: #c00;
+        }
+        .required-false {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>UI Routes Documentation</h1>
+    <div class="route-block"><h2 class="path"><code>/</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/dashboard</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/dictionaries</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/dictionaries/new-data-dictionary</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/dictionaries/{projectId}/{dictionaryId}/edit-dictionary</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>projectId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>dictionaryId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/files</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/files/new-file</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/files/{projectId}/{name}/update-file</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>projectId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/functions</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/functions/new-custom-function</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/functions/{projectId}/{functionId}/edit-function</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>projectId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>functionId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/new-ingest-source</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-summary-table</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-summary-table/column-analysis</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-table</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-transform</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-transform-template</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/new-view</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/organization-settings</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/project/{projectId}/health</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>projectId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/project/{projectId}/health/delete-project</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>projectId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/column-management</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/column-management/analyze-expression</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/column-management/new-column-alias</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/column-management/{columnId}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>columnId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>number</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/column-management/{columnId}/analyze-expression</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>columnId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>number</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/edit-summary-settings</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/edit-summary-settings/column-analysis</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/source/edit/{type}/{uuid}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>type</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>uuid</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/transform/edit/{uuid}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>uuid</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/tables/{tableId}/view/edit/{uuid}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>uuid</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/transform-templates</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/data/transform-templates/{templateId}/edit</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>templateId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/data/validate-transform</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/jobs/alter-jobs</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/jobs/alter-jobs/create</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/jobs/batch-jobs</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/jobs/batch-jobs/create</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/login</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/password-reset</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/profile/change-password</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/profile/create-token</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/profile/settings</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/queries</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/result</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/scale</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/scale/core</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/scale/pool/create</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/scale/pool/{id}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>id</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/scale/search</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/audit-trails</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/auth-logs</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/buckets</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/buckets/{bucketId}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>bucketId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/credentials</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/credentials/{credentialId}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>credentialId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/new-bucket</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/new-credential</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/new-service-account</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/pending-invites</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/roles</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/roles/new-role</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/roles/{roleId}/edit-role</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>roleId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/row-policies</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/row-policies/?table_id={tableId}&data={tableName}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>tableName</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>table_id</code></td>
+                        <td>query</td>
+                        <td><span class="required-false">False</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>data</code></td>
+                        <td>query</td>
+                        <td><span class="required-false">False</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/row-policies/new-row-policy</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/row-policies/{tableId}/{rowPolicyId}/edit-row-policy</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>tableId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>rowPolicyId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/service-accounts</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/service-accounts/{accountId}/update-service-account</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>accountId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/security/users</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/users/invite-new-user</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/security/users/{userId}/edit-user</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>userId</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/support</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/system-health/counts</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/system-health/logs</code></h2><div class="no-params">No parameters.</div></div><div class="route-block"><h2 class="path"><code>/verifyaccount/{uuidb64}/{token}</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Required</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <td><code>uuidb64</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>token</code></td>
+                        <td>path</td>
+                        <td><span class="required-true">True</span></td>
+                        <td>string</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div><div class="route-block"><h2 class="path"><code>/version</code></h2><div class="no-params">No parameters.</div></div>
+</body>
+</html>
+    
