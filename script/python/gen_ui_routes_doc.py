@@ -86,7 +86,7 @@ def extract_query_params(path: str, params: dict):
 
 def generate_routes_doc():
     input_path = Path("routes/routes.ts")
-    output_path = Path("routes/docs/openapi_schema.json")
+    output_path = Path("routes/docs/routes_openapi_schema.json")
 
     if not input_path.exists():
         print(f"Routes file not found in: {input_path}")
@@ -111,14 +111,14 @@ def generate_routes_doc():
             entry["parameters"] = all_params
         paths[path] = entry
 
-    openapi_schema = {
+    routes_openapi_schema = {
         "openapi": "3.1.0",
         "info": {"title": "UI Routes Documentation"},
         "paths": paths,
     }
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(openapi_schema, indent=2, ensure_ascii=False))
+    output_path.write_text(json.dumps(routes_openapi_schema, indent=2, ensure_ascii=False))
     print(f"UI routes documentation saved to: {output_path}")
 
 
