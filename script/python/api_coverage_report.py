@@ -8,7 +8,7 @@ Analyzes test coverage of API endpoints by comparing:
 
 Usage:
     python script/python/api_coverage_report.py
-    python script/python/api_coverage_report.py --schema resources/openapi_schema.json --features test/api/platform/features
+    python script/python/api_coverage_report.py --schema normalized_schemas/api/normalized_api.json --features test/api/platform/features
     python script/python/api_coverage_report.py --format json --output coverage_report.json
     python script/python/api_coverage_report.py --format html --output coverage_report.html
     python script/python/api_coverage_report.py --format markdown --output coverage_report.md
@@ -72,27 +72,59 @@ class OpenAPIParser:
             print(f"✗ Invalid JSON in schema file: {e}", file=sys.stderr)
             sys.exit(1)
 
+    # def extract_operations(self) -> List[EndpointInfo]:
+    #     """Extract all operations from OpenAPI schema."""
+    #     operations = []
+    #     paths = self.schema.get('paths', {})
+
+    #     for path, path_item in paths.items():
+    #         for method in ['get', 'post', 'put', 'patch', 'delete']:
+    #             if method in path_item:
+    #                 operation = path_item[method]
+    #                 operation_id = operation.get('operationId', '')
+
+    #                 if operation_id:
+    #                     operations.append(EndpointInfo(
+    #                         operation_id=operation_id,
+    #                         path=path,
+    #                         method=method.upper(),
+    #                         summary=operation.get('summary', ''),
+    #                         tags=operation.get('tags', [])
+    #                     ))
+
+    #     return operations
+
     def extract_operations(self) -> List[EndpointInfo]:
-        """Extract all operations from OpenAPI schema."""
         operations = []
-        paths = self.schema.get('paths', {})
 
-        for path, path_item in paths.items():
-            for method in ['get', 'post', 'put', 'patch', 'delete']:
-                if method in path_item:
-                    operation = path_item[method]
-                    operation_id = operation.get('operationId', '')
+    # The normalized schema is a LIST, not a dict with "paths"
+        for item in self.schema:
+            if item.get("featureType") != "apiEndpoint":
+                continue  # ignore other feature types just in case
 
-                    if operation_id:
-                        operations.append(EndpointInfo(
-                            operation_id=operation_id,
-                            path=path,
-                            method=method.upper(),
-                            summary=operation.get('summary', ''),
-                            tags=operation.get('tags', [])
-                        ))
+            spec = item.get("spec", {})
+            operation_id = spec.get("operationId")
+            path = spec.get("path")
+            method = spec.get("method", "").upper()
+            summary = item.get("description", "")
+            tags = item.get("tags", [])
+            
+            if not operation_id:
+                continue  # skip malformed entries
+
+            operations.append(
+                EndpointInfo(
+                    operation_id=operation_id,
+                    path=path,
+                    method=method,
+                    summary=summary,
+                    tags=tags
+                )
+            )
 
         return operations
+
+
 
 
 class FeatureFileParser:
@@ -697,8 +729,8 @@ def main():
     )
     parser.add_argument(
         '--schema',
-        default='script/python/openapi_schema.json',
-        help='Path to OpenAPI schema file (default: script/python/openapi_schema.json)'
+        default='normalized_schemas/api/normalized_api.json',
+        help='Path to OpenAPI schema file (default: normalized_schemas/api/normalized_api.json)'
     )
     parser.add_argument(
         '--features',
