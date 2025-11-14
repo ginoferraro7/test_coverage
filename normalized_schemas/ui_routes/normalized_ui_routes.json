@@ -1,0 +1,1568 @@
+{
+  "features": [
+    {
+      "id": "ui_root",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [],
+      "spec": {
+        "route": "/",
+        "path": null,
+        "method": null,
+        "operationId": "root",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_dashboard",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "dashboard"
+      ],
+      "spec": {
+        "route": "/dashboard",
+        "path": null,
+        "method": null,
+        "operationId": "dashboard",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_dictionaries",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/dictionaries",
+        "path": null,
+        "method": null,
+        "operationId": "data_dictionaries",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_dictionaries_new-data-dictionary",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "dictionaries"
+      ],
+      "spec": {
+        "route": "/data/dictionaries/new-data-dictionary",
+        "path": null,
+        "method": null,
+        "operationId": "data_dictionaries_new-data-dictionary",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_dictionaries_edit-dictionary",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "dictionaries"
+      ],
+      "spec": {
+        "route": "/data/dictionaries/{projectId}/{dictionaryId}/edit-dictionary",
+        "path": null,
+        "method": null,
+        "operationId": "data_dictionaries_{projectId}_{dictionaryId}_edit-dictionary",
+        "components": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dictionaryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_files",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/files",
+        "path": null,
+        "method": null,
+        "operationId": "data_files",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_files_new-file",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "files"
+      ],
+      "spec": {
+        "route": "/data/files/new-file",
+        "path": null,
+        "method": null,
+        "operationId": "data_files_new-file",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_files_update-file",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "files"
+      ],
+      "spec": {
+        "route": "/data/files/{projectId}/{name}/update-file",
+        "path": null,
+        "method": null,
+        "operationId": "data_files_{projectId}_{name}_update-file",
+        "components": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_functions",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/functions",
+        "path": null,
+        "method": null,
+        "operationId": "data_functions",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_functions_new-custom-function",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "functions"
+      ],
+      "spec": {
+        "route": "/data/functions/new-custom-function",
+        "path": null,
+        "method": null,
+        "operationId": "data_functions_new-custom-function",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_functions_edit-function",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "functions"
+      ],
+      "spec": {
+        "route": "/data/functions/{projectId}/{functionId}/edit-function",
+        "path": null,
+        "method": null,
+        "operationId": "data_functions_{projectId}_{functionId}_edit-function",
+        "components": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "functionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_new-ingest-source",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-ingest-source",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-ingest-source",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-summary-table",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-summary-table",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-summary-table",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-summary-table_column-analysis",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "new-summary-table"
+      ],
+      "spec": {
+        "route": "/data/new-summary-table/column-analysis",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-summary-table_column-analysis",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-table",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-table",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-table",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-transform",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-transform",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-transform",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-transform-template",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-transform-template",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-transform-template",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_new-view",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/new-view",
+        "path": null,
+        "method": null,
+        "operationId": "data_new-view",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_organization-settings",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/organization-settings",
+        "path": null,
+        "method": null,
+        "operationId": "data_organization-settings",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_project_health",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "project"
+      ],
+      "spec": {
+        "route": "/data/project/{projectId}/health",
+        "path": null,
+        "method": null,
+        "operationId": "data_project_{projectId}_health",
+        "components": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_project_health_delete-project",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "project"
+      ],
+      "spec": {
+        "route": "/data/project/{projectId}/health/delete-project",
+        "path": null,
+        "method": null,
+        "operationId": "data_project_{projectId}_health_delete-project",
+        "components": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/tables",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_tables",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_column-management",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/column-management",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_column-management",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_column-management_analyze-expression",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/column-management/analyze-expression",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_column-management_analyze-expression",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_column-management_new-column-alias",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/column-management/new-column-alias",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_column-management_new-column-alias",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_column-management",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/column-management/{columnId}",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_column-management_{columnId}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "columnId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_column-management_analyze-expression",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/column-management/{columnId}/analyze-expression",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_column-management_{columnId}_analyze-expression",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "columnId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_edit-summary-settings",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/edit-summary-settings",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_edit-summary-settings",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_edit-summary-settings_column-analysis",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/edit-summary-settings/column-analysis",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_edit-summary-settings_column-analysis",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_source_edit",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/source/edit/{type}/{uuid}",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_source_edit_{type}_{uuid}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_transform_edit",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/transform/edit/{uuid}",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_transform_edit_{uuid}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_tables_view_edit",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "tables"
+      ],
+      "spec": {
+        "route": "/data/tables/{tableId}/view/edit/{uuid}",
+        "path": null,
+        "method": null,
+        "operationId": "data_tables_{tableId}_view_edit_{uuid}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_transform-templates",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/transform-templates",
+        "path": null,
+        "method": null,
+        "operationId": "data_transform-templates",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_data_transform-templates_edit",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data",
+        "transform-templates"
+      ],
+      "spec": {
+        "route": "/data/transform-templates/{templateId}/edit",
+        "path": null,
+        "method": null,
+        "operationId": "data_transform-templates_{templateId}_edit",
+        "components": [
+          {
+            "name": "templateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_data_validate-transform",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "data"
+      ],
+      "spec": {
+        "route": "/data/validate-transform",
+        "path": null,
+        "method": null,
+        "operationId": "data_validate-transform",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_jobs_alter-jobs",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "jobs"
+      ],
+      "spec": {
+        "route": "/jobs/alter-jobs",
+        "path": null,
+        "method": null,
+        "operationId": "jobs_alter-jobs",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_jobs_alter-jobs_create",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "jobs",
+        "alter-jobs"
+      ],
+      "spec": {
+        "route": "/jobs/alter-jobs/create",
+        "path": null,
+        "method": null,
+        "operationId": "jobs_alter-jobs_create",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_jobs_batch-jobs",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "jobs"
+      ],
+      "spec": {
+        "route": "/jobs/batch-jobs",
+        "path": null,
+        "method": null,
+        "operationId": "jobs_batch-jobs",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_jobs_batch-jobs_create",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "jobs",
+        "batch-jobs"
+      ],
+      "spec": {
+        "route": "/jobs/batch-jobs/create",
+        "path": null,
+        "method": null,
+        "operationId": "jobs_batch-jobs_create",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_login",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "login"
+      ],
+      "spec": {
+        "route": "/login",
+        "path": null,
+        "method": null,
+        "operationId": "login",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_password-reset",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "password-reset"
+      ],
+      "spec": {
+        "route": "/password-reset",
+        "path": null,
+        "method": null,
+        "operationId": "password-reset",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_profile_change-password",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "profile"
+      ],
+      "spec": {
+        "route": "/profile/change-password",
+        "path": null,
+        "method": null,
+        "operationId": "profile_change-password",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_profile_create-token",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "profile"
+      ],
+      "spec": {
+        "route": "/profile/create-token",
+        "path": null,
+        "method": null,
+        "operationId": "profile_create-token",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_profile_settings",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "profile"
+      ],
+      "spec": {
+        "route": "/profile/settings",
+        "path": null,
+        "method": null,
+        "operationId": "profile_settings",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_queries",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "queries"
+      ],
+      "spec": {
+        "route": "/queries",
+        "path": null,
+        "method": null,
+        "operationId": "queries",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_result",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "result"
+      ],
+      "spec": {
+        "route": "/result",
+        "path": null,
+        "method": null,
+        "operationId": "result",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_scale",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "scale"
+      ],
+      "spec": {
+        "route": "/scale",
+        "path": null,
+        "method": null,
+        "operationId": "scale",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_scale_core",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "scale"
+      ],
+      "spec": {
+        "route": "/scale/core",
+        "path": null,
+        "method": null,
+        "operationId": "scale_core",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_scale_pool_create",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "scale",
+        "pool"
+      ],
+      "spec": {
+        "route": "/scale/pool/create",
+        "path": null,
+        "method": null,
+        "operationId": "scale_pool_create",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_scale_pool",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "scale",
+        "pool"
+      ],
+      "spec": {
+        "route": "/scale/pool/{id}",
+        "path": null,
+        "method": null,
+        "operationId": "scale_pool_{id}",
+        "components": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_scale_search",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "scale"
+      ],
+      "spec": {
+        "route": "/scale/search",
+        "path": null,
+        "method": null,
+        "operationId": "scale_search",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_audit-trails",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/audit-trails",
+        "path": null,
+        "method": null,
+        "operationId": "security_audit-trails",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_auth-logs",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/auth-logs",
+        "path": null,
+        "method": null,
+        "operationId": "security_auth-logs",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_buckets",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/buckets",
+        "path": null,
+        "method": null,
+        "operationId": "security_buckets",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_buckets",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "buckets"
+      ],
+      "spec": {
+        "route": "/security/buckets/{bucketId}",
+        "path": null,
+        "method": null,
+        "operationId": "security_buckets_{bucketId}",
+        "components": [
+          {
+            "name": "bucketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_credentials",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/credentials",
+        "path": null,
+        "method": null,
+        "operationId": "security_credentials",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_credentials",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "credentials"
+      ],
+      "spec": {
+        "route": "/security/credentials/{credentialId}",
+        "path": null,
+        "method": null,
+        "operationId": "security_credentials_{credentialId}",
+        "components": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_new-bucket",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/new-bucket",
+        "path": null,
+        "method": null,
+        "operationId": "security_new-bucket",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_new-credential",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/new-credential",
+        "path": null,
+        "method": null,
+        "operationId": "security_new-credential",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_new-service-account",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/new-service-account",
+        "path": null,
+        "method": null,
+        "operationId": "security_new-service-account",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_pending-invites",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/pending-invites",
+        "path": null,
+        "method": null,
+        "operationId": "security_pending-invites",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_roles",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/roles",
+        "path": null,
+        "method": null,
+        "operationId": "security_roles",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_roles_new-role",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "roles"
+      ],
+      "spec": {
+        "route": "/security/roles/new-role",
+        "path": null,
+        "method": null,
+        "operationId": "security_roles_new-role",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_roles_edit-role",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "roles"
+      ],
+      "spec": {
+        "route": "/security/roles/{roleId}/edit-role",
+        "path": null,
+        "method": null,
+        "operationId": "security_roles_{roleId}_edit-role",
+        "components": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_row-policies",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/row-policies",
+        "path": null,
+        "method": null,
+        "operationId": "security_row-policies",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_row-policies",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/row-policies/?table_id={tableId}&data={tableName}",
+        "path": null,
+        "method": null,
+        "operationId": "security_row-policies_?table_id={tableId}&data={tableName}",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tableName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "table_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_row-policies_new-row-policy",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "row-policies"
+      ],
+      "spec": {
+        "route": "/security/row-policies/new-row-policy",
+        "path": null,
+        "method": null,
+        "operationId": "security_row-policies_new-row-policy",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_row-policies_edit-row-policy",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "row-policies"
+      ],
+      "spec": {
+        "route": "/security/row-policies/{tableId}/{rowPolicyId}/edit-row-policy",
+        "path": null,
+        "method": null,
+        "operationId": "security_row-policies_{tableId}_{rowPolicyId}_edit-row-policy",
+        "components": [
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rowPolicyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_service-accounts",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/service-accounts",
+        "path": null,
+        "method": null,
+        "operationId": "security_service-accounts",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_service-accounts_update-service-account",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "service-accounts"
+      ],
+      "spec": {
+        "route": "/security/service-accounts/{accountId}/update-service-account",
+        "path": null,
+        "method": null,
+        "operationId": "security_service-accounts_{accountId}_update-service-account",
+        "components": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_security_users",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security"
+      ],
+      "spec": {
+        "route": "/security/users",
+        "path": null,
+        "method": null,
+        "operationId": "security_users",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_users_invite-new-user",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "users"
+      ],
+      "spec": {
+        "route": "/security/users/invite-new-user",
+        "path": null,
+        "method": null,
+        "operationId": "security_users_invite-new-user",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_security_users_edit-user",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "security",
+        "users"
+      ],
+      "spec": {
+        "route": "/security/users/{userId}/edit-user",
+        "path": null,
+        "method": null,
+        "operationId": "security_users_{userId}_edit-user",
+        "components": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_support",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "support"
+      ],
+      "spec": {
+        "route": "/support",
+        "path": null,
+        "method": null,
+        "operationId": "support",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_system-health_counts",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "system-health"
+      ],
+      "spec": {
+        "route": "/system-health/counts",
+        "path": null,
+        "method": null,
+        "operationId": "system-health_counts",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_system-health_logs",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "system-health"
+      ],
+      "spec": {
+        "route": "/system-health/logs",
+        "path": null,
+        "method": null,
+        "operationId": "system-health_logs",
+        "components": null
+      }
+    },
+    {
+      "id": "ui_verifyaccount",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "verifyaccount",
+        "{uuidb64}"
+      ],
+      "spec": {
+        "route": "/verifyaccount/{uuidb64}/{token}",
+        "path": null,
+        "method": null,
+        "operationId": "verifyaccount_{uuidb64}_{token}",
+        "components": [
+          {
+            "name": "uuidb64",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui_version",
+      "featureType": "uiPage",
+      "description": "",
+      "tags": [
+        "version"
+      ],
+      "spec": {
+        "route": "/version",
+        "path": null,
+        "method": null,
+        "operationId": "version",
+        "components": null
+      }
+    }
+  ]
+}
